@@ -1,4 +1,4 @@
-<article class="product-item" data-id="{{ id }}" {{ attributes }}>
+<article class="product-item" data-id="{{ id }}" {{ attributes }} data-controller="checkkout">
     <header>
         {{ title }}
     </header>
@@ -16,6 +16,8 @@
         </div>
     </div>
     <footer>
-        <button>Add to cart</button>
+        <button
+            data-action="checkout#addToCart"
+        >Add to cart</button>
     </footer>
 </article>

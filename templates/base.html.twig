@@ -26,6 +26,7 @@
             <ul>
                 <li><a href="{{ path('app_index') }}"{% if current_path != 'app_index' %} class="contrast"{% endif %}>Index</a></li>
                 <li><a href="{{ path('app_products_index') }}"{% if current_path != 'app_products_index' %} class="contrast"{% endif %}>Products</a></li>
+                <li style="margin-left: 15px"><a href="{{ path('app_checkout') }}"><button class="secondary">Checkout</button></a></li>
             </ul>
         </nav>
     </header>

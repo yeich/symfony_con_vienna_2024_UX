@@ -1,0 +1,12 @@
+<tr data-controller="checkout-product" class="checkout-product">
+    <th scope="row">{{ title }}</th>
+    <td><span data-checkout-product-target="price">{{ price }}</span>€</td>
+    <td>
+        <span {{ attributes }}>
+            <button data-action="checkout-product#decrease checkout-cart#update" data-checkout-product-target="decrease" disabled style="margin-right: 5px">-</button>
+            <span data-checkout-product-target="quantity"></span>
+            <button data-action="checkout-product#increase checkout-cart#update" style="margin-left: 5px">+</button>
+        </span>
+    </td>
+    <td><span data-checkout-product-target="totalprice"></span> €</td>
+</tr>
