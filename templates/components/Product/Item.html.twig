@@ -1,6 +1,6 @@
-<article class="product-item" {{ attributes }}>
+<article class="product-item" data-id="{{ id }}" {{ attributes }}>
     <header>
-        {{ title|striptags|slice(0, maxTitleChars) }}
+        {{ title }}
     </header>
     <div class="product-item-content">
         <div class="product-item-image">

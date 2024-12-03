@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Products{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/products.css') }}">
+{% endblock %}
+
+{% block body %}
+    {% for product in products %}
+        <twig:Product:Item product="{{ product }}" />
+    {% endfor %}
+{% endblock %}
