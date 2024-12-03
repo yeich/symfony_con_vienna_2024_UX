@@ -1,3 +1,5 @@
+{% set current_path = app.request.get('_route') %}
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -16,9 +18,20 @@
         {% endblock %}
     </head>
     <body>
+    <header>
+        <nav class="container">
+            <ul>
+                <li><strong>UX Workshop</strong></li>
+            </ul>
+            <ul>
+                <li><a href="{{ path('app_index') }}"{% if current_path != 'app_index' %} class="contrast"{% endif %}>Index</a></li>
+                <li><a href="{{ path('app_products_index') }}"{% if current_path != 'app_products_index' %} class="contrast"{% endif %}>Products</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <main class="container">
-            {% block body %}
-        {% endblock %}
+        {% block body %}{% endblock %}
     </main>
     </body>
 </html>
