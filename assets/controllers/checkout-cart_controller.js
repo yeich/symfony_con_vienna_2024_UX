@@ -2,6 +2,7 @@ import {Controller} from "@hotwired/stimulus";
 
 const COUPONS = {
     'BF2024': 10,
+    'SYMCON': 50
 }
 
 export default class extends Controller {
@@ -44,8 +45,13 @@ export default class extends Controller {
 
             this.discountTarget.textContent = `${discount}%`;
             this.discountTarget.closest('tr').style.display = 'table-row';
+            this.couponTarget.setAttribute('aria-invalid', false);
         } else {
             this.discountTarget.closest('tr').style.display = 'none';
+
+            if(this.couponTarget.value.length > 0) {
+                this.couponTarget.setAttribute('aria-invalid', true);
+            }
         }
 
         return discount;
