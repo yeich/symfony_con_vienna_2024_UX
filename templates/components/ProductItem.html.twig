@@ -1,4 +1,4 @@
-<article class="product-item" data-id="{{ id }}" {{ attributes }}>
+<article class="product-item" {{ attributes }}>
     <header>
         {{ title|striptags|slice(0, maxTitleChars) }}
     </header>
@@ -6,8 +6,13 @@
         <div class="product-item-image">
             <img src="{{ pictureUrl }}" alt="">
         </div>
-        <div class="product-item-description">
-            {{ description }}
+        <div>
+            <div class="product-item-price">
+                <b>Price: {{ price }}€</b>
+            </div>
+            <div class="product-item-description">
+                {{ description }}
+            </div>
         </div>
     </div>
     <footer>

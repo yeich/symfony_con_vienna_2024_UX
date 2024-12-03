@@ -13,6 +13,8 @@ final class ProductItem
     public string $title = 'Product';
     public string $description = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.';
 
-    public string $pictureUrl = 'https://placehold.co/600x400';
+    public string $pictureUrl;
     public int $id;
+
+    public string $price;
 }

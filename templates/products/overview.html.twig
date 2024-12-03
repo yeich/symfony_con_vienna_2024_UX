@@ -8,6 +8,6 @@
 
 {% block body %}
     {% for product in products %}
-        <twig:ProductItem id="{{ product.id }}" title="{{ product.name }}" description="{{ product.description }}" pictureUrl="{{ product.image }}" />
+        <twig:ProductItem id="{{ product.id }}" title="{{ product.name }}" description="{{ product.description }}" price="{{ product.price }}" pictureUrl="{{ product.image }}" />
     {% endfor %}
 {% endblock %}
