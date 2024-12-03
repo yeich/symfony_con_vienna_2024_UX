@@ -1,0 +1,19 @@
+.product-item {
+
+  .product-item-content {
+
+    display: flex;
+    gap: 30px;
+
+    .product-item-image {
+      img {
+        max-width: 200px;
+      }
+    }
+  }
+
+  footer {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

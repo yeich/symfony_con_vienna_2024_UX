@@ -1,0 +1,13 @@
+.product-item .product-item-content {
+  display: flex;
+  gap: 30px;
+}
+.product-item .product-item-content .product-item-image img {
+  max-width: 200px;
+}
+.product-item footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/*# sourceMappingURL=products.css.map */

@@ -1,0 +1,16 @@
+<article class="product-item" data-id="{{ id }}" {{ attributes }}>
+    <header>
+        {{ title|striptags|slice(0, maxTitleChars) }}
+    </header>
+    <div class="product-item-content">
+        <div class="product-item-image">
+            <img src="{{ pictureUrl }}" alt="">
+        </div>
+        <div class="product-item-description">
+            {{ description }}
+        </div>
+    </div>
+    <footer>
+        <button>Add to cart</button>
+    </footer>
+</article>
