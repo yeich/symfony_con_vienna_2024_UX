@@ -11,6 +11,34 @@
                 href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
         >
 
+        <style>
+            .checkout-button {
+                position: relative;
+            }
+
+            .checkout-button:not([data-total-items="0"]):after {
+
+                content: attr(data-total-items);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+
+                width: 20px;
+                height: 20px;
+
+                color: #ffffff;
+                background-color: red;
+
+                font-size: 12px;
+
+                top: -10px;
+                right: -10px;
+
+                border-radius: 50%;
+            }
+        </style>
+
         {% block stylesheets %}{% endblock %}
 
         {% block javascripts %}
@@ -26,7 +54,7 @@
             <ul>
                 <li><a href="{{ path('app_index') }}"{% if current_path != 'app_index' %} class="contrast"{% endif %}>Index</a></li>
                 <li><a href="{{ path('app_products_index') }}"{% if current_path != 'app_products_index' %} class="contrast"{% endif %}>Products</a></li>
-                <li style="margin-left: 15px"><a href="{{ path('app_checkout') }}"><button class="secondary">Checkout</button></a></li>
+                <li style="margin-left: 15px"><a href="{{ path('app_checkout') }}"><twig:Checkout:Button /></a></li>
             </ul>
         </nav>
     </header>

@@ -6,7 +6,7 @@ use App\Entity\Product;
 use Symfony\UX\TwigComponent\Attribute\AsTwigComponent;
 
 #[AsTwigComponent]
-final class Item
+class Item
 {
 
     public int $id;

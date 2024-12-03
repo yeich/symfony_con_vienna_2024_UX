@@ -1,11 +1,18 @@
-<tr data-controller="checkout-product" class="checkout-product">
-    <th scope="row">{{ title }}</th>
-    <td><span data-checkout-product-target="price">{{ price }}</span>€</td>
+<tr data-controller="checkout-product" class="checkout-product" {{ attributes }}>
+    <th scope="row">{{ this.title }}</th>
+    <td><span data-checkout-product-target="price">{{ this.price }}</span>€</td>
     <td>
-        <span {{ attributes }}>
-            <button data-action="checkout-product#decrease checkout-cart#update" data-checkout-product-target="decrease" disabled style="margin-right: 5px">-</button>
-            <span data-checkout-product-target="quantity"></span>
-            <button data-action="checkout-product#increase checkout-cart#update" style="margin-left: 5px">+</button>
+        <span>
+            <button
+                    data-action="checkout-product#decrease checkout-cart#update live#action"
+                    data-live-action-param="removeFromCart"
+                    data-checkout-product-target="decrease"
+                    disabled style="margin-right: 5px">-</button>
+            <span data-checkout-product-target="quantity">{{ this.quantity }}</span>
+            <button
+                    data-action="checkout-product#increase checkout-cart#update live#action"
+                    data-live-action-param="addToCart"
+                    style="margin-left: 5px">+</button>
         </span>
     </td>
     <td><span data-checkout-product-target="totalprice"></span> €</td>

@@ -25,8 +25,17 @@ export default class extends Controller {
     }
 
     connect() {
-        this.quantityTarget.textContent = 0;
-        this.totalpriceTarget.textContent = 0;
+
+        if(parseInt(this.quantityTarget.textContent) === 0) {
+            this.quantityTarget.textContent = 0;
+        } else {
+            this.decreaseTarget.removeAttribute('disabled');
+            this.updateTotalPrice();
+        }
+
+        if(this.totalpriceTarget.textContent.length === 0) {
+            this.totalpriceTarget.textContent = 0;
+        }
     }
 
     updateTotalPrice() {

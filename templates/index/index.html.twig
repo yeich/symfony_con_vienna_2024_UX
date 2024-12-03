@@ -3,7 +3,18 @@
 {% block title %}Hello IndexController!{% endblock %}
 
 {% block body %}
-    <twig:Button label="World" />
+    <div>
+        <h3>Button</h3>
+        <twig:Button label="World" />
+    </div>
 
-    <twig:ClickButton/>
+    <div>
+        <h3>Click Button</h3>
+        <twig:ClickButton/>
+    </div>
+
+    <div>
+        <h3>LiveButton</h3>
+        <twig:LiveButton/>
+    </div>
 {% endblock %}

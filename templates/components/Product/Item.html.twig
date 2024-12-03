@@ -1,4 +1,4 @@
-<article class="product-item" data-id="{{ id }}" {{ attributes }} data-controller="checkkout">
+<article class="product-item" data-id="{{ id }}" {{ attributes }} data-controller="product">
     <header>
         {{ title }}
     </header>
@@ -16,8 +16,6 @@
         </div>
     </div>
     <footer>
-        <button
-            data-action="checkout#addToCart"
-        >Add to cart</button>
+        <twig:Product:AddItemToCartButton productId="{{ id }}" />
     </footer>
 </article>
