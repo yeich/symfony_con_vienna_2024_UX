@@ -1,9 +1,26 @@
 <div {{ attributes }}>
     {{ form_start(form) }}
 
-        {{ form_rest(form) }}
+        <div class="row">
+            {{ form_row(form.name) }}
+        </div>
+        <div class="row">
+            {{ form_row(form.email) }}
+        </div>
+        <div class="row">
+            {{ form_row(form.subject) }}
+        </div>
+        <div class="row">
+            {{ form_row(form.message, ) }}
+            <div style="text-align: right; font-size: 12px">
+                Chars Left:
+                <span id="chars-left"
+                      data-contact-form-target="charcounter"
+                >{{ form.message.vars.attr['data-max-length'] }}</span> / <span data-contact-form-target="maxcharcount">{{ form.message.vars.attr['data-max-length'] }}</span>
+            </div>
+        </div>
 
-        <div class="grid">
+        <div class="row" style="margin-top: 30px">
             <button
                 type="submit"
                 data-action="live#action:prevent"

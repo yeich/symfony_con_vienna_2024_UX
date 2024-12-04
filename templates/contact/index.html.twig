@@ -2,6 +2,16 @@
 
 {% block title %}Contact{% endblock %}
 
+{% block stylesheets %}
+    <style>
+        label.required:after {
+            content: '*';
+        }
+    </style>
+{% endblock %}
+
 {% block body %}
-    <twig:Form:ContactForm />
+    <div data-controller="contact-form">
+        <twig:Form:ContactForm />
+    </div>
 {% endblock %}
